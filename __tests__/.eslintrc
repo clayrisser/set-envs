@@ -1,0 +1,6 @@
+{
+  "extends": ["plugin:jest/recommended"],
+  "rules": {
+    "no-template-curly-in-string": "off"
+  }
+}

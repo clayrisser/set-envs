@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 export default function setEnvs(configString) {
-  const matches = configString.match(/\${((\\})|[^}])*}/g);
+  const matches = configString.match(/\${((\\})|[^}])+}/g);
   _.each(matches, match => {
     const env = getEnvFromMatch(match);
     configString = configString.replace(match, env);
@@ -9,7 +9,7 @@ export default function setEnvs(configString) {
   return configString;
 }
 
-function getEnvFromMatch(match) {
+export function getEnvFromMatch(match) {
   let envDefault = '';
   let envName = match.substr(2, match.length - 3);
   const index = envName.search(/[^\\]:/);
