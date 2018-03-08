@@ -1,6 +1,6 @@
 {
   "name": "set-envs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Overwrite configuration with environment variables",
   "homepage": "https://github.com/jamrizzi/set-envs",
   "author": {
